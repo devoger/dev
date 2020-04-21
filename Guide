@@ -1,0 +1,17 @@
+1. Install the development version until you see the error.
+2. Create a file in /dev12_files/hummingbot_conf and name it conf_pure_market_making_strategy_0.yml
+3. Paste below sample content in your conf_pure_market_making_strategy_0.yml and save
+https://pastebin.com/v2hU3GF3
+4. Run
+
+docker run -it \
+-e STRATEGY=pure_market_making \
+-e CONFIG_FILE_NAME=conf_pure_market_making_strategy_0.yml \
+-e WALLET=0x97A13bB4dce5Ca64Bb136a9255B2B9561012D \
+-e CONFIG_PASSWORD=mytestpassword \
+--mount "type=bind,source=$(pwd)/dev12_files/hummingbot_conf,destination=/conf/" \
+--mount "type=bind,source=$(pwd)/dev12_files/hummingbot_logs,destination=/logs/" \
+--mount "type=bind,source=$(pwd)/dev12_files/hummingbot_data,destination=/data/" \
+coinalpha/hummingbot:development
+
+Note: Change dev12_files to your hummingbot name
