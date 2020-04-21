@@ -14,4 +14,4 @@ docker run -it \
 --mount "type=bind,source=$(pwd)/dev12_files/hummingbot_data,destination=/data/" \
 coinalpha/hummingbot:development
 
-Note: Change dev12_files to your hummingbot name
+Note: replace dev12_files to your own hummingbot name
