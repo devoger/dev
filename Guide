@@ -1,11 +1,13 @@
 1. Install the development version until you see the error.
 
-2. Locate the bot with failed install and create a file in /dev12_files/hummingbot_conf and name it conf_pure_market_making_strategy_0.yml
+2. Locate the bot with failed install and create a file in /your-bot-name_files/hummingbot_conf and name it conf_pure_market_making_strategy_0.yml
 
 3. Paste below sample content in your conf_pure_market_making_strategy_0.yml and save
 https://pastebin.com/v2hU3GF3
 
 4. Run
+Note: replace dev12_files to your own hummingbot name
+
 
 docker run -it \
 -e STRATEGY=pure_market_making \
@@ -17,4 +19,4 @@ docker run -it \
 --mount "type=bind,source=$(pwd)/dev12_files/hummingbot_data,destination=/data/" \
 coinalpha/hummingbot:development
 
-Note: replace dev12_files to your own hummingbot name
+
